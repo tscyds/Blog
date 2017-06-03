@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.dson.blog.mvp.widget.SearchView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/searchview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center_vertical">
+
+    <FrameLayout
+            android:id="@+id/searchview_btn_container"
+            android:layout_width="@dimen/searchview_btn_width"
+            android:layout_height="@dimen/searchview_height"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent">
+
+        <TextView
+                android:id="@+id/searchview_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/searchview_btn_height"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/searchview_btn_text"
+                android:textColor="@color/black_60per_transparent"
+                android:textSize="@dimen/searchview_btn_text_size"/>
+    </FrameLayout>
+
+
+    <View
+            android:id="@+id/searchview_bg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/searchview_input_height"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/searchview_btn_container"
+            android:background="@drawable/search_bar"/>
+
+    <ImageView
+            android:id="@+id/searchview_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/searchview_bg"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/searchview_icon_left_margin"
+            android:background="@drawable/searchview_ic_search_dark"/>
+
+    <ImageView
+            android:id="@+id/searchview_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/searchview_bg"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/searchview_clear_left_margin"
+            android:layout_marginRight="@dimen/searchview_clear_right_margin"
+            android:src="@drawable/searchview_ic_input_clear"
+            android:visibility="invisible"/>
+
+    <com.dson.blog.mvp.widget.ImeEditText
+            android:id="@+id/searchview_input"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/searchview_input_height"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/searchview_clear"
+            android:layout_toRightOf="@id/searchview_icon"
+            android:background="@null"
+            android:focusable="true"
+            android:imeOptions="actionSearch"
+            android:includeFontPadding="false"
+            android:maxLength="30"
+            android:paddingTop="@dimen/searchview_input_top_padding"
+            android:textColor="@color/black_60per_transparent"
+            android:textColorHint="@color/searchview_input_hint_color"
+            android:textCursorDrawable="@drawable/search_cursor"
+            android:textSize="@dimen/searchview_input_text_size"/>
+
+</com.dson.blog.mvp.widget.SearchView>

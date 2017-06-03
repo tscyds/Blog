@@ -1,0 +1,19 @@
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+            android:id="@+id/base_layout_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/base_toolbar"
+            android:layout_marginTop="@dimen/toolbar_height"
+            android:background="@android:color/white">
+    </FrameLayout>
+
+    <android.support.v7.widget.Toolbar
+            android:id="@id/base_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"/>
+</FrameLayout>

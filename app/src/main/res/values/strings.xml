@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Blog</string>
+    <string name="searchview_btn_text">搜索</string>
+</resources>
